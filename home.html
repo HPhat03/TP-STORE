@@ -19,9 +19,9 @@
 
     <div class="banner">
         <div id="menu">
-            <img src="images/spotlight/g01_thumbnail.jpg" id="i0">
-            <img src="images/spotlight/g02_thumbnail.jpg"id="i1">
-            <img src="images/spotlight/g03_thumbnail.jpg" id="i2">
+            <img src="./images/spotlight/g01_thumbnail.jpg" id="i0" class="active">
+            <img src="./images/spotlight/g02_thumbnail.jpg"id="i1">
+            <img src="./images/spotlight/g03_thumbnail.jpg" id="i2">
         </div>
         <div id="show">
             <div id="button">Thêm vào giỏ hàng</div>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="free">
-        <div class="title">FREE TO PLAY</div>
+        <div class="title">MIỄN PHÍ</div>
         <div class="frame">
             <a  class="game">
                 <div id="roblox"></div>
@@ -62,7 +62,7 @@
     <div class="free">
         <div id="left">&lt;</div>
         <div id="right">&gt;</div>
-        <div class="title">PAID GAMES</div>
+        <div class="title">GAME CÓ PHÍ</div>
         <div class="frame1">
             <a class="game" id="first">
                 <div id="spd" class="pic"></div>
@@ -120,7 +120,7 @@
     <div class="free">
         <div id="left1">&lt;</div>
         <div id="right1">&gt;</div>
-        <div class="title">POPULAR</div>
+        <div class="title">THỊNH HÀNH</div>
         <div class="frame1">
             <a class="game" id="first1">
                 <div id="spd" class="pic"></div>
@@ -201,18 +201,38 @@
 
     setInterval(function(){
         if(counter > 2) counter = 0;
+        
         var Pos = ["right", "center", "left"]
         var color = ["gray", "white", "rgb(89,151,228)"]
         var pri = ["FREE", "1.139.000 VNĐ", "1.090.000 VNĐ"]
+
+        const listImg = document.querySelectorAll("#menu img");
+        
         var pr = document.getElementById("price");
         var bg = document.getElementById("show").style;
             bg.backgroundImage = "url(images/spotlight/g0" + parseInt(counter+1) + ".jpg)";
             bg.backgroundPosition = Pos[counter];
+
+            document.querySelector('.active').classList.remove('active');
+            listImg[counter].classList.add('active');
+
         pr.style.color = color[counter];
         pr.innerHTML = pri[counter];
         var pic = document.getElementById("i"+counter);
         counter++;
     },2000);
+
+    let u = JSON.parse(localStorage.getItem('user'));
+
+    console.log(u);
+
+    // let u = {
+    //     "name": "user1",
+    //     "password": "123"
+    // }
+
+    // localStorage.setItem('user', JSON.stringify(u));
+
     </script>
 </body>
 </html>

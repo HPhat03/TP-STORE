@@ -91,6 +91,10 @@ nav h2, nav a:not(:last-child), p{
     border: none;
 }
 
+#menu img.active {
+    border: 2px solid #fff;
+}
+
 .selector{
     border: 2px solid rgb(218, 218, 111);
 }
