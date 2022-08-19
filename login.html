@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>TP store - Join us!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="home.js"></script>
+    <script>
+        $().ready(function(){
+            $("#reg").hide();
+            $("#Dk").click(function(){
+                $("#in").hide(2000);
+                $("#reg").show(2000);
+            });
+
+            $("#Dn").click(function(){
+                $("#reg").hide(2000);
+                $("#in").show(2000);
+            });
+        })
+    </script>
+</head>
+<body>
+    <nav>
+        <h2>TP Store</h2>
+        <input type="text" id="search" placeholder="Tìm kiếm trò chơi của bạn..">
+        <div class="container"><a href="index.html">Home</a>
+        <a>Cart</a>
+        <button type="button" id="login"><a href="login.html">Đăng nhập</a></button>
+        </div>
+    </nav>
+    <div id="loginPanel">
+        <div class="login">
+            <div id="in">
+                <h3>ĐĂNG NHẬP</h3>
+                <form action="index.html" method="post" name="login">
+                    <fieldset>
+                        <legend>TP Store!</legend>
+                        <label for="username">Tên người dùng:</label>
+                        <br><input type="text" size="35px">
+                        <br><label for="pass">Mật khẩu:</label>
+                        <br><input type="password" size="35px">
+                        <br><button>Login</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div id="reg">
+                <h3>ĐĂNG KÍ</h3>
+                <form action="index.html" method="post" name="login">
+                    <fieldset>
+                        <legend>TP Store!</legend>
+                        <label for="username">Tên người dùng:</label>
+                        <br><input type="text" size="35px" class="inp">
+                        <br><label for="email">Email:</label>
+                        <br><input type="email" size="50px" class="inp">
+                        <br><label for="pass">Mật khẩu:</label>
+                        <br><input type="password" size="35px" class="inp">
+                        <br><label for="pass">Xác nhận mật khẩu:</label>
+                        <br><input type="password" size="35px" class="inp">
+                        <br><button>register</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="panel">
+            <div>
+                <div></div>
+                <p>Tham gia TP Store - Khám phá hàng ngàn game thú vị</p>
+                <div><button type="button" id="Dn">Đăng nhập</button> hoặc nếu bạn chưa có tài khoản <button type="button" id="Dk">Đăng kí</button></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

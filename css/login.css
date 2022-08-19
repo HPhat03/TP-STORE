@@ -1,0 +1,81 @@
+#loginPanel{
+    height: 586px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.login{
+    font-family: Baloo2;
+    width: 60%;
+    background: url(../images/login/login.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.login div{
+    font-size: 1.75em;
+    text-align: center;
+    color: white;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+input{
+    padding-left: 20px;
+
+}
+#reg{
+    font-size: 1em;
+}
+
+#reg h3{
+    font-size: 1.75em;
+}
+.login div input
+{
+    height: 30px;
+}
+button:not(#login){
+    margin-top: 30px;
+    width: 100px;
+    height: 30px;
+    font-family: Baloo;
+    font-size: large;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-color: white;
+    color: white;
+}
+label{
+    text-align: left;
+    margin-bottom: 0px;
+}
+div.panel{
+    width: 40%;
+    background-color:rgb(4, 9, 20);
+    position: relative;
+}
+
+.panel>div{
+    font-size: small;
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.panel div div:first-child{
+    width: 80%;
+    height: 250px;
+    margin-left: 50px;
+    border: 2px solid white;
+    animation: roblox 10s infinite;
+    background-size: cover;
+    border-radius: 20px;
+}
