@@ -11,9 +11,12 @@
     <nav>
         <h2>TP Store</h2>
         <input type="text" id="search" placeholder="Tìm kiếm trò chơi của bạn..">
-        <div class="container"><a href="index.html">Home</a>
-        <a>Cart</a>
-        <button type="button" id="login"><a href="login.html">Đăng nhập</a></button>
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a>Cart</a>
+            <button type="button" id="login">
+                <a href="login.html">Đăng nhập</a>
+            </button>
         </div>
     </nav>
 
@@ -221,17 +224,6 @@
         var pic = document.getElementById("i"+counter);
         counter++;
     },2000);
-
-    let u = JSON.parse(localStorage.getItem('user'));
-
-    console.log(u);
-
-    // let u = {
-    //     "name": "user1",
-    //     "password": "123"
-    // }
-
-    // localStorage.setItem('user', JSON.stringify(u));
 
     </script>
 </body>

@@ -6,3 +6,10 @@ function move(m){
 window.addEventListener("scroll", () => move("2nd"));
 window.addEventListener("scroll", () => move("3rd"));
 window.addEventListener("scroll", () => move("4th"));
+
+var login ={
+    "active": "no",
+    "name": "null"
+}
+
+localStorage.setItem("login",JSON.stringify(login));

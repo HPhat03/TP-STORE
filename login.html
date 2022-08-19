@@ -6,27 +6,13 @@
     <link rel="stylesheet" href="css/login.css">
     <title>TP store - Join us!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="home.js"></script>
-    <script>
-        $().ready(function(){
-            $("#reg").hide();
-            $("#Dk").click(function(){
-                $("#in").hide(2000);
-                $("#reg").show(2000);
-            });
-
-            $("#Dn").click(function(){
-                $("#reg").hide(2000);
-                $("#in").show(2000);
-            });
-        })
-    </script>
+    <script src="login.js"></script>
 </head>
 <body>
     <nav>
         <h2>TP Store</h2>
-        <input type="text" id="search" placeholder="Tìm kiếm trò chơi của bạn..">
-        <div class="container"><a href="index.html">Home</a>
+        <!-- <input type="text" id="search" placeholder="Tìm kiếm trò chơi của bạn.."> -->
+        <div class="container"><a href="home.html">Home</a>
         <a>Cart</a>
         <button type="button" id="login"><a href="login.html">Đăng nhập</a></button>
         </div>
@@ -35,32 +21,30 @@
         <div class="login">
             <div id="in">
                 <h3>ĐĂNG NHẬP</h3>
-                <form action="index.html" method="post" name="login">
                     <fieldset>
                         <legend>TP Store!</legend>
                         <label for="username">Tên người dùng:</label>
-                        <br><input type="text" size="35px">
+                        <br><input type="text" size="35px" id="username">
                         <br><label for="pass">Mật khẩu:</label>
-                        <br><input type="password" size="35px">
-                        <br><button>Login</button>
+                        <br><input type="password" size="35px" id="pass">
+                        <p class="wrong"></p>
+                        <a id="Goto"><button type="button">Đăng nhập</button></a>
                     </fieldset>
-                </form>
             </div>
 
             <div id="reg">
                 <h3>ĐĂNG KÍ</h3>
-                <form action="./index.html" method="post" name="login">
                     <fieldset>
                         <legend>TP Store!</legend>
                         <label for="username">Tên người dùng:</label>
-                        <br><input type="text" size="35px" class="inp">
+                        <br><input type="text" size="35px" id="usernameR">
                         <br><label for="pass">Mật khẩu:</label>
-                        <br><input type="password" size="35px" class="inp">
-                        <br><label for="pass">Xác nhận mật khẩu:</label>
-                        <br><input type="password" size="35px" class="inp">
-                        <br><button>register</button>
+                        <br><input type="password" size="35px" id="passR">
+                        <br><label for="confirm">Xác nhận mật khẩu:</label>
+                        <br><input type="password" size="35px" id="confirmR">
+                        <p class="wrong"></p>
+                        <a id="GotoR"><button>Đăng kí</button></a>
                     </fieldset>
-                </form>
             </div>
         </div>
         <div class="panel">

@@ -12,6 +12,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    transition: all 1s;
 }
 .login div{
     font-size: 1.75em;
@@ -39,7 +40,7 @@ input{
     height: 30px;
 }
 button:not(#login){
-    margin-top: 30px;
+    margin-top: 0px;
     width: 100px;
     height: 30px;
     font-family: Baloo;
@@ -78,4 +79,9 @@ div.panel{
     animation: roblox 10s infinite;
     background-size: cover;
     border-radius: 20px;
+}
+
+p.wrong{
+    color: red;
+    font-size: 0.45em;
 }

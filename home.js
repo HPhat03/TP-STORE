@@ -80,4 +80,26 @@ $().ready(function(){
         if(d>0) d=10;
         $("#first1").css("marginLeft",d+"px");
     });
+    var login = JSON.parse(localStorage.getItem("login"));
+    if(login.active == "yes")
+    {
+        $("#login a").text(login.name);
+        $("#login a").attr("href","./home.html")
+        $("#login a").mouseover(function(){
+            $(this).text("Đăng xuất")
+            $("#login").css("backgroundColor", "red")
+        });
+        $("#login a").mouseout(function(){
+            $(this).text(login.name)
+            $("#login").css("backgroundColor", "rgba(255, 255, 255, 0)")
+        });
+        $("#login a").click(function(){
+            var log ={
+                "active": "no",
+                "name": "null"
+            }
+            localStorage.setItem("login",JSON.stringify(log));
+        })
+    }
+    
 });
