@@ -13,7 +13,7 @@
         <div class="search">
             <input type="text" id="search" onkeyup="search()" placeholder="Tìm kiếm trò chơi của bạn..">
             <div class="rec">
-                <a href="https://www.roblox.com/home"><div>
+                <a href="spiderman.html"><div>
                     <img src="./images/Spiderman.jpg" class="irec"></img>
                     <p>Spiderman: remastered</p>
                 </div></a>
@@ -78,7 +78,7 @@
                     <p>Grand Theft Auto</p>
                 </div></a>
 
-                <p>TP Store!</p>
+                <p>Không tìm thấy kết quả!</p>
             </div>
         </div>
         <div class="container">
@@ -97,7 +97,7 @@
             <img src="./images/spotlight/g03_thumbnail.jpg" id="i2">
         </div>
         <div id="show">
-            <div id="button">Thêm vào giỏ hàng</div>
+            <a id="button">Thêm vào giỏ hàng</a>
             <div id="price">FREE</div>
         </div>
     </div>
@@ -137,7 +137,7 @@
         <div id="right">&gt;</div>
         <div class="title">GAME CÓ PHÍ</div>
         <div class="frame1">
-            <a class="game" id="first">
+            <a class="game" id="first" href="spiderman.html">
                 <div id="spd" class="pic"></div>
                 <p>Spiderman: remastered</p>
                 <div class="paid">&dollar;</div>
@@ -195,7 +195,7 @@
         <div id="right1">&gt;</div>
         <div class="title">THỊNH HÀNH</div>
         <div class="frame1">
-            <a class="game" id="first1">
+            <a class="game" id="first1" href="spiderman.html">
                 <div id="spd" class="pic"></div>
                 <p>Spiderman: remastered</p>
                 <div class="paid">&dollar;</div>
@@ -274,7 +274,7 @@
 
     setInterval(function(){
         if(counter > 2) counter = 0;
-        
+        var link = ["./genshin.html","./spiderman.html","./fifa.html"]
         var Pos = ["right", "center", "left"]
         var color = ["gray", "white", "rgb(89,151,228)"]
         var pri = ["FREE", "1.139.000 VNĐ", "1.090.000 VNĐ"]
@@ -288,7 +288,7 @@
 
             document.querySelector('.active').classList.remove('active');
             listImg[counter].classList.add('active');
-
+        $("#button").attr("href",link[counter]);
         pr.style.color = color[counter];
         pr.innerHTML = pri[counter];
         var pic = document.getElementById("i"+counter);

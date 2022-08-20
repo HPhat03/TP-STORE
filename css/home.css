@@ -162,13 +162,14 @@ div.rec{
     transition: all.6s;
 }
 
-#show div{
+#show a, #show div{
     position: absolute;
     left: 100px;
     font-family: Baloo2;
 }
 
 #button{
+    text-decoration: none;
     bottom: 50px;
     font-size: 1.75em;
     color: black;

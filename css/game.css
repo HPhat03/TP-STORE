@@ -1,0 +1,78 @@
+.body{
+    width: 90%;
+    height: fit-content;
+    margin: 70px;
+    background-color: rgb(1, 1, 31);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.body>div{
+    margin: 10px;
+    background-color: rgb(20, 20, 77);
+    border-radius: 7px;
+}
+iframe{border-radius: 7px;}
+.video{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.afford{
+    margin: 30px 0px;
+    width: 700;
+    height: 100px;
+    position: relative;
+    font-family: Baloo2;
+    color: white;
+    padding-left: 10px;
+    background-color: rgb(0,0,53);
+}
+.afford p{
+    color: rgb(228, 212, 68);
+    font-family: Baloo2;
+    font-size: 1.5em;
+    padding: 0px;
+    
+}
+
+.afford a{
+    text-align: center;
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+    width: 13%;
+    height: 30%;
+    font-size: 1.25em;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(228, 212, 68);
+}
+.desc{
+    width: 40%;
+}
+
+.desc div:first-child{
+    background-image: url("../images/Spiderman.jpg");
+    background-size: cover;
+    border-bottom: 2px solid white;
+    height: 30%;
+}
+.description{
+    height: 60%;
+    margin: 0px 10px;
+    background-color: rgba(0, 0, 0, 0.247);
+    color: white;
+    font-family: Baloo2;
+    font-size: 1em;
+    padding: 5px;
+}
+
+table{
+    margin: 10px;
+}
+table tr td:first-child{
+    width: 40%;
+}

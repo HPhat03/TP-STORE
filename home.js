@@ -16,6 +16,7 @@ $().ready(function(){
             src="./images/spotlight/g02.jpg"
             price = "1.139.000 VNĐ"
             $("#price").css("color", "white");
+            $("#button").attr("href","./spiderman.html");
         }
         else if(t=="./images/spotlight/g03_thumbnail.jpg")
         {
