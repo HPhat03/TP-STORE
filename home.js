@@ -3,24 +3,24 @@ $().ready(function(){
     $("#menu img").click(function(){
         var t = $(this).attr("src");
         var src, price;
-        if(t=="images/spotlight/g01_thumbnail.jpg")
+        if(t=="./images/spotlight/g01_thumbnail.jpg")
         {
             $("#show").css("backgroundPosition", "right");
-            src="images/spotlight/g01.jpg";
+            src="./images/spotlight/g01.jpg";
             price = "FREE"
             $("#price").css("color", "gray");
         }
-        else if(t=="images/spotlight/g02_thumbnail.jpg")
+        else if(t=="./images/spotlight/g02_thumbnail.jpg")
         {
             $("#show").css("backgroundPosition", "center");
-            src="images/spotlight/g02.jpg"
+            src="./images/spotlight/g02.jpg"
             price = "1.139.000 VNĐ"
             $("#price").css("color", "white");
         }
-        else if(t=="images/spotlight/g03_thumbnail.jpg")
+        else if(t=="./images/spotlight/g03_thumbnail.jpg")
         {
             $("#show").css("backgroundPosition", "left");
-            src="images/spotlight/g03.jpg"
+            src="./images/spotlight/g03.jpg"
             price = "1.090.000 VNĐ"
             $("#price").css("color", "rgb(89,151,228)");
         }
@@ -84,7 +84,7 @@ $().ready(function(){
     if(login.active == "yes")
     {
         $("#login a").text(login.name);
-        $("#login a").attr("href","./home.html")
+        $("#login a").attr("href","./home.html  ")
         $("#login a").mouseover(function(){
             $(this).text("Đăng xuất")
             $("#login").css("backgroundColor", "red")
@@ -101,5 +101,27 @@ $().ready(function(){
             localStorage.setItem("login",JSON.stringify(log));
         })
     }
-    
+    $(".rec").hide();
+    $(document).click(e => {
+        e.target == $("#search")[0] ? $(".rec").show() : $(".rec").hide()
+    })
 });
+//search, filter
+function search(){
+    var input = document.getElementById("search");
+    var key = input.value.toUpperCase();
+    var recommend = document.getElementsByClassName("rec")[0];
+    var game = recommend.getElementsByTagName('a');
+    var text, p, title;
+    for(var i =0; i<game.length; i++)
+    {
+        p = game[i].getElementsByTagName("div")[0];
+        title = p.getElementsByTagName('p')[0];
+        text = title.innerHTML;
+        if(text.toUpperCase().indexOf(key) > -1)
+            game[i].style.display = "block";
+        if(key=="" || text.toUpperCase().indexOf(key) == -1)
+            game[i].style.display = "none";
+    }
+    
+}
