@@ -61,7 +61,7 @@ nav h2, nav a:not(:last-child), p{
     background-color: rgba(255, 255, 255, 0);
     border: 2px solid white;
     color: white;
-    position: relative;
+    transition: all 1s;
 }
 
 #login a{
