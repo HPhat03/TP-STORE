@@ -81,6 +81,8 @@ $().ready(function(){
         if(d>0) d=10;
         $("#first1").css("marginLeft",d+"px");
     });
+
+    //kiem tra trang thai login
     var login = JSON.parse(localStorage.getItem("login"));
     if(login.active == "yes")
     {
@@ -101,7 +103,17 @@ $().ready(function(){
             }
             localStorage.setItem("login",JSON.stringify(log));
         })
+        //trong cac muc game an hien so tien của user
+        $(".afford p:nth-of-type(2)").css("display","block")
     }
+
+    //trang cart
+    if(login.active == "yes")
+    $(".container>a:nth-of-type(2)").attr("href", "./cart.html")
+    else
+    $(".container>a:nth-of-type(2)").attr("href", "./login.html")
+
+//code search
     $(".rec").hide();
     $(document).click(e => {
         e.target == $("#search")[0] ? $(".rec").show() : $(".rec").hide()
@@ -124,5 +136,4 @@ function search(){
         if(key=="" || text.toUpperCase().indexOf(key) == -1)
             game[i].style.display = "none";
     }
-    
 }

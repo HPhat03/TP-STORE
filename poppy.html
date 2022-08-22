@@ -95,18 +95,18 @@
  
     <div class="body">
         <div class="video">
-            <iframe width="710" height="393" src="https://www.youtube.com/embed/1E051WtpyWg?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="710" height="393" src="https://www.youtube.com/embed/6VXcganpmeI?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="afford">
-                <h2>MARVEL'S SPIDERMAN: REMASTERED</h2>
-                <p>1.139.000 VNĐ</p>
+                <h2>POPPY PLAYTIME: CHAPTER 1</h2>
+                <p>120.000 VNĐ</p>
                 <p>Tài khoản:</p>
                 <a>MUA</a>
             </div>
         </div>
         <div class="desc">
-            <div></div>
+            <div id="pop"></div>
             <div class="description">
-                <p>Trong Marvel's Spider-Man - Remastered, các thế giới của Peter Parker và Spider-Man va chạm nhau trong một câu chuyện gốc hành động ngẹt thở. Vào vai Peter Parker đầy kinh nghiệm, chiến đấu với tội phạm lớn và những nhân vật phản diện tiêu biểu trong New York của Marvel.</p>
+                <p>Bạn phải sống sót trong cuộc phiêu lưu kinh dị / giải đố này. Cố gắng sống sót với những món đồ chơi báo thù đang chờ bạn trong nhà máy đồ chơi bị bỏ hoang. Sử dụng GrabPack của bạn để hack các mạch điện hoặc kiểm soát bất cứ thứ gì từ xa. Khám phá cơ sở bí ẩn ... và không bị bắt.</p>
                 <table  align="center">
                     <tr>
                         <td>Đánh giá chung:</td>
@@ -115,16 +115,16 @@
 
                     <tr>
                         <td>Ngày phát hành:</td>
-                        <td style="color: rgb(228, 212, 68);">12 Thg 8, 2022</td>
+                        <td style="color: rgb(228, 212, 68);">12 Thg 10, 2021</td>
                     </tr>
                     <tr>
                         <td>Nhà phát triến:</td>
                         <td style="color: rgb(228, 212, 68);">
-                            Insomniac Games, Nixxes Software</td>
+                            MOD GAME</td>
                     </tr>
                     <tr>
                         <td>Nhà phát hành:</td>
-                        <td style="color: rgb(228, 212, 68);">PlayStation PC LLC</td>
+                        <td style="color: rgb(228, 212, 68);">MOD GAME</td>
                     </tr>
                 </table>
             </div>
@@ -138,7 +138,7 @@
             user = check(login.name);
             $(".afford p:nth-of-type(2)").html("Tài khoản: " + user.wallet);
         }
-        if(user.cart.indexOf("#spd") != -1)
+        if(user.cart.indexOf("#pop") != -1)
             $(".afford a").html("Mở");
     },2000);
         $().ready(function(){
@@ -149,17 +149,17 @@
                 return;
             }
 
-                var text = "Bạn muốn mua Spider-man: Remastered?";
+                var text = "Bạn muốn mua Poppy playtime: chapter 1?";
                 if($(".afford a").html() == "Mở") return;
-                if(user.wallet >= 1139000 && confirm(text)==true)
+                if(user.wallet >= 120000 && confirm(text)==true)
                 {
-                    var money = parseInt(user.wallet) -1139000;
+                    var money = parseInt(user.wallet) -120000;
                     user.wallet = money;
-                    user.cart = user.cart +"#spd";
+                    user.cart = user.cart +"#pop";
                     localStorage.setItem(user.key,JSON.stringify(user));
                     $(".afford a").html("Mở");
                 }
-                else if(user.wallet <1139000) alert("Tài khoản quý khách không đủ để thực hiện giao dịch!");
+                else if(user.wallet <120000) alert("Tài khoản quý khách không đủ để thực hiện giao dịch!");
         })
         });
     </script>

@@ -8,7 +8,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="home.js"></script>
     <script src="login.js"></script>
-    
 </head>
 <body>
     <nav>
@@ -92,76 +91,77 @@
             </button>
         </div>
     </nav>
- 
+    
     <div class="body">
         <div class="video">
-            <iframe width="710" height="393" src="https://www.youtube.com/embed/1E051WtpyWg?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="710" height="393" src="https://www.youtube.com/embed/o3V-GvvzjE4?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="afford">
-                <h2>MARVEL'S SPIDERMAN: REMASTERED</h2>
-                <p>1.139.000 VNĐ</p>
+                <h2>FIFA 23</h2>
+                <p>1.090.000 VNĐ</p>
                 <p>Tài khoản:</p>
                 <a>MUA</a>
             </div>
         </div>
         <div class="desc">
-            <div></div>
+            <div style="background-image: url(./images/spotlight/g03.jpg);"></div>
             <div class="description">
-                <p>Trong Marvel's Spider-Man - Remastered, các thế giới của Peter Parker và Spider-Man va chạm nhau trong một câu chuyện gốc hành động ngẹt thở. Vào vai Peter Parker đầy kinh nghiệm, chiến đấu với tội phạm lớn và những nhân vật phản diện tiêu biểu trong New York của Marvel.</p>
+                <p>FIFA 23 mang Trò chơi của thế giới đến sân cỏ, với Công nghệ HyperMotion2 mang đến trải nghiệm chơi chân thực hơn nữa, FIFA World Cup ™ dành cho nam và nữ sẽ ra mắt trong mùa giải, các đội câu lạc bộ nữ, tính năng chơi chéo *, v.v.</p>
                 <table  align="center">
                     <tr>
                         <td>Đánh giá chung:</td>
-                        <td style="color: rgb(228, 212, 68);">Cực kì tích cực(16,325)</td>
+                        <td style="color: rgb(228, 212, 68);">Chưa có đánh giá</td>
                     </tr>
 
                     <tr>
                         <td>Ngày phát hành:</td>
-                        <td style="color: rgb(228, 212, 68);">12 Thg 8, 2022</td>
+                        <td style="color: rgb(228, 212, 68);">1 Thg 10, 2022</td>
                     </tr>
                     <tr>
                         <td>Nhà phát triến:</td>
                         <td style="color: rgb(228, 212, 68);">
-                            Insomniac Games, Nixxes Software</td>
+                            EA Canada & EA Romania</td>
                     </tr>
                     <tr>
                         <td>Nhà phát hành:</td>
-                        <td style="color: rgb(228, 212, 68);">PlayStation PC LLC</td>
+                        <td style="color: rgb(228, 212, 68);">
+                            Electronic Arts</td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
     <script>
-    setInterval(function(){
-        login = JSON.parse(localStorage.getItem("login"));
-        if(login.active == "yes")
-        {
-            user = check(login.name);
-            $(".afford p:nth-of-type(2)").html("Tài khoản: " + user.wallet);
-        }
-        if(user.cart.indexOf("#spd") != -1)
-            $(".afford a").html("Mở");
-    },2000);
-        $().ready(function(){
-        $(".afford a").click(function(){
-            if(login.active == "no")
+        setInterval(function(){
+            login = JSON.parse(localStorage.getItem("login"));
+            if(login.active == "yes")
             {
-                alert("Quý khách cần đăng nhập để sử dụng dịch vụ");
-                return;
+                user = check(login.name);
+                $(".afford p:nth-of-type(2)").html("Tài khoản: " + user.wallet);
             }
-
-                var text = "Bạn muốn mua Spider-man: Remastered?";
-                if($(".afford a").html() == "Mở") return;
-                if(user.wallet >= 1139000 && confirm(text)==true)
+            if(user.cart.indexOf("#fifa") != -1)
+                $(".afford a").html("Mở");
+        },2000);
+            $().ready(function(){
+            $(".afford a").click(function(){
+                if(login.active == "no")
                 {
-                    var money = parseInt(user.wallet) -1139000;
-                    user.wallet = money;
-                    user.cart = user.cart +"#spd";
-                    localStorage.setItem(user.key,JSON.stringify(user));
-                    $(".afford a").html("Mở");
+                    alert("Quý khách cần đăng nhập để sử dụng dịch vụ");
+                    return;
                 }
-                else if(user.wallet <1139000) alert("Tài khoản quý khách không đủ để thực hiện giao dịch!");
-        })
-        });
-    </script>
+    
+                    var text = "Bạn muốn mua FIFA 23";
+                    if($(".afford a").html() == "Mở") return;
+                    if(user.wallet >= 1090000 && confirm(text)==true)
+                    {
+                        var money = parseInt(user.wallet) -1090000;
+                        user.wallet = money;
+                        user.cart = user.cart +"#fifa";
+                        localStorage.setItem(user.key,JSON.stringify(user));
+                        $(".afford a").html("Mở");
+                    }
+                    else if(user.wallet <1000) alert("Tài khoản quý khách không đủ để thực hiện giao dịch!");
+            })
+            });
+        </script>
     </body>
     </html>

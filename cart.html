@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .body{
+        padding: 20px;
+        width: 90%;
+        min-height: 500px;
+        margin: 70px;
+        background-color: rgb(1, 1, 31);
+        border-radius: 10px;
+        border: 2px solid black;
+        position: relative;
+    }
+    h3,h1{
+        font-family: Baloo2;
+        color: wheat;
+    }
+    .free{
+        margin: 20px 0px;
+    }
+
+    .body button{
+        font-family: Fernando;
+        font-size: 1em;
+        font-weight: bold;
+        position: absolute;
+        right: 100px;
+        top: 80px;
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(255, 222, 35);
+        color: black;
+    }
+    </style>
+    <title>TP store - Game website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="home.js"></script>
+    <script src="login.js"></script>
+    
+</head>
+<body>
+    <nav>
+        <h2>TP Store</h2>
+        <div class="search">
+            <input type="text" id="search" onkeyup="search()" placeholder="Tìm kiếm trò chơi của bạn..">
+            <div class="rec">
+                <a href="./spiderman.html"><div>
+                    <img src="./images/Spiderman.jpg" class="irec"></img>
+                    <p>Spiderman: remastered</p>
+                </div></a>
+
+                <a href="./naraka.html"><div>
+                    <img src="./images/naraka.jpg" class="irec" id="S1"></img>
+                    <p>NARAKA: BLADEPOINT</p>
+                </div></a>
+
+                <a href="./genshin.html"><div>
+                    <img src="./images/Free/genshin.jpg" class="irec" id="S2"></img>
+                    <p>Genshin Impact</p>
+                </div></a>
+
+                <a href="./stray.html"><div>
+                    <img src="./images/stray.jpg" class="irec" id="S3"></img>
+                    <p>Stray</p>
+                </div></a>
+
+                <a href="./identityV.html"><div>
+                    <img src="./images/Free/identityV.jpg" class="irec" id="S4"></img>
+                    <p>Identity V</p>
+                </div></a>
+
+                <a href="./ready.html"><div>
+                    <img src="./images/ready.jpg" class="irec" id="S5"></img>
+                    <p>Ready or Not</p>
+                </div></a>
+
+                <a href="./roblox.html"><div>
+                    <img src="./images/Free/Roblox.jpg" class="irec" id="S6"></img>
+                    <p>Roblox</p>
+                </div></a>
+
+                <a href="./poppy.html"><div>
+                    <img src="./images/poppy.jpg" class="irec" id="S7"></img>
+                    <p>Poppy Playtime</p>
+                </div></a>
+
+                <a href="./minecraft.html"><div>
+                    <img src="./images/minecraft.jpg" class="irec" id="S8"></img>
+                    <p>Minecraft</p>
+                </div></a>
+
+                <a href="./fifa.html"><div>
+                    <img src="./images/FIFA.jpg" class="irec" id="S9"></img>
+                    <p>FIFA 23</p>
+                </div></a>
+
+                <a href="./elden.html"><div>
+                    <img src="./images/eldenring.jpg" class="irec" id="S10"></img>
+                    <p>Elden Ring</p>
+                </div></a>
+
+                <a href="./stardew.html"><div>
+                    <img src="./images/stardew.jpg" class="irec" id="S11"></img>
+                    <p>Stardew Valley</p>
+                </div></a>
+
+                <a href="./gta.html"><div>
+                    <img src="./images/gta.jpg" class="irec" id="S12"></img>
+                    <p>Grand Theft Auto</p>
+                </div></a>
+
+                <p>Không tìm thấy kết quả!</p>
+            </div>
+        </div>
+        <div class="container">
+            <a href="home.html">Home</a>
+            <a>Cart</a>
+            <button type="button" id="login">
+                <a href="login.html">Đăng nhập</a>
+            </button>
+        </div>
+    </nav>
+
+    <div class="body">
+        <h1>Xin chào,....</h1><br>
+        <h3>Số tiền trong tài khoản: </h3>
+        <button type="button">Nạp tiền</button>
+        <div class="free">
+            <div id="left">&lt;</div>
+            <div id="right">&gt;</div>
+            <div class="title">GAME BẠN ĐÃ MUA:</div>
+            <div class="frame1">
+                <a class="game" id="first" href="spiderman.html">
+                    <div id="spd" class="pic"></div>
+                    <p>Spiderman: remastered</p>
+                    <div class="paid">&dollar;</div>
+                </a>
+                <a class="game" href="./stray.html">
+                    <div id="stray" class="pic"></div>
+                    <p>Stray</p>
+                    <div class="paid">&dollar;</div>
+                </a>
+                <a  href="./poppy.html" class="game">
+                    <div id="pop" class="pic"></div>
+                    <p>Poppy playtime </p>
+                    <div class="paid">&dollar;</div>
+                </a>
+                <a class="game">
+                    <div id="mc" class="pic"></div>
+                    <p>Minecraft </p>
+                    <div class="paid">&dollar;</div>
+                </a>
+                <a class="game" href="./fifa.html">
+                    <div id="fifa" class="pic"></div>
+                    <p>FIFA 23 </p>
+                    <div class="paid">&dollar;</div>
+                </a>
+                <a class="game">
+                    <div id="Elden" class="pic"></div>
+                    <p>Elden ring </p>
+                    <div class="paid">&dollar;</div>
+                </a>
+                <a class="game">
+                    <div id="Naraka" class="pic"></div>
+                    <p>NARAKA: BLADEPOINT </p>
+                    <div class="paid">&dollar;</div>
+                </a>
+                <a class="game">
+                    <div id="GTA" class="pic"></div>
+                    <p>Grand Theft Auto V </p>
+                    <div class="paid">&dollar;</div>
+                </a>
+                <a class="game">
+                    <div id="ready" class="pic"></div>
+                    <p>Ready or Not </p>
+                    <div class="paid">&dollar;</div>
+                </a>
+                <a class="game">
+                    <div id="stardew" class="pic"></div>
+                    <p>Stardew Valley </p>
+                    <div class="paid">&dollar;</div>
+                </a>
+            </div>  
+        </div>
+    </div>
+
+    <script>
+        $(".game").hide();
+        login = JSON.parse(localStorage.getItem("login"));
+        user = check(login.name);
+        $("h1").html("Xin chào, " + user.name)
+        setInterval(function(){$("h3").html("Số tiền trong tài khoản: " + user.wallet + " VNĐ")},2000);
+        game = new Array;
+        game = user.cart.split("#");
+        console.log(game);
+        for(var i = 1; i<game.length; i++)
+        {
+            var text = "#" + game[i];
+            $(text).parent().show();
+        }
+        $(".body button").click(function(){
+            if(confirm("Bạn muốn nạp thêm 1.000.000 VNĐ vào tài khoản?")==true){
+            user.wallet = parseInt(user.wallet) + 1000000;
+            localStorage.setItem(user.key,JSON.stringify(user));
+            }
+        })
+    </script>
+ </body>
+ </html>

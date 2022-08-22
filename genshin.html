@@ -7,8 +7,6 @@
     <title>TP store - Game website</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="home.js"></script>
-    <script src="login.js"></script>
-    
 </head>
 <body>
     <nav>
@@ -95,18 +93,17 @@
  
     <div class="body">
         <div class="video">
-            <iframe width="710" height="393" src="https://www.youtube.com/embed/1E051WtpyWg?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="710" height="393" src="https://www.youtube.com/embed/WIxkKExpu94?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="afford">
-                <h2>MARVEL'S SPIDERMAN: REMASTERED</h2>
-                <p>1.139.000 VNĐ</p>
-                <p>Tài khoản:</p>
-                <a>MUA</a>
+                <h2>Genshin Impact</h2>
+                <p>Miễn phí</p>
+                <a target="_blank" href="https://genshin.hoyoverse.com/">Chơi</a>
             </div>
         </div>
         <div class="desc">
-            <div></div>
+            <div id="genshin"></div>
             <div class="description">
-                <p>Trong Marvel's Spider-Man - Remastered, các thế giới của Peter Parker và Spider-Man va chạm nhau trong một câu chuyện gốc hành động ngẹt thở. Vào vai Peter Parker đầy kinh nghiệm, chiến đấu với tội phạm lớn và những nhân vật phản diện tiêu biểu trong New York của Marvel.</p>
+                <p class="i4">Genshin Impact là một tựa game phiêu lưu hành động mới của nhà phát triển MiHoYo đến từ Trung Quốc. Nó diễn ra trong thế giới hư cấu của Teyvat, nơi ma thuật nguyên tố, rồng, quái vật, linh hồn và những yếu tố kỳ ảo khác là một phần của cuộc sống hàng ngày. Bạn vào vai một người cậu bé hoặc cô nàng được gọi là Traveller, khi bắt đầu cuộc phiêu lưu, đã đi du lịch giữa các thế giới khác nhau cùng với anh chị em sinh đôi của bạn trước khi một người phụ nữ bí ẩn tách bạn ra và nhốt bạn trong Teyvat một mình.</p>
                 <table  align="center">
                     <tr>
                         <td>Đánh giá chung:</td>
@@ -115,53 +112,19 @@
 
                     <tr>
                         <td>Ngày phát hành:</td>
-                        <td style="color: rgb(228, 212, 68);">12 Thg 8, 2022</td>
+                        <td style="color: rgb(228, 212, 68);">27 Thg 9, 2020</td>
                     </tr>
                     <tr>
                         <td>Nhà phát triến:</td>
-                        <td style="color: rgb(228, 212, 68);">
-                            Insomniac Games, Nixxes Software</td>
+                        <td style="color: rgb(228, 212, 68);">miHoYo</td>
                     </tr>
                     <tr>
                         <td>Nhà phát hành:</td>
-                        <td style="color: rgb(228, 212, 68);">PlayStation PC LLC</td>
+                        <td style="color: rgb(228, 212, 68);">miHoYo</td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-    <script>
-    setInterval(function(){
-        login = JSON.parse(localStorage.getItem("login"));
-        if(login.active == "yes")
-        {
-            user = check(login.name);
-            $(".afford p:nth-of-type(2)").html("Tài khoản: " + user.wallet);
-        }
-        if(user.cart.indexOf("#spd") != -1)
-            $(".afford a").html("Mở");
-    },2000);
-        $().ready(function(){
-        $(".afford a").click(function(){
-            if(login.active == "no")
-            {
-                alert("Quý khách cần đăng nhập để sử dụng dịch vụ");
-                return;
-            }
-
-                var text = "Bạn muốn mua Spider-man: Remastered?";
-                if($(".afford a").html() == "Mở") return;
-                if(user.wallet >= 1139000 && confirm(text)==true)
-                {
-                    var money = parseInt(user.wallet) -1139000;
-                    user.wallet = money;
-                    user.cart = user.cart +"#spd";
-                    localStorage.setItem(user.key,JSON.stringify(user));
-                    $(".afford a").html("Mở");
-                }
-                else if(user.wallet <1139000) alert("Tài khoản quý khách không đủ để thực hiện giao dịch!");
-        })
-        });
-    </script>
     </body>
     </html>

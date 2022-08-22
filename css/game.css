@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     border-radius: 10px;
+    border: 2px solid black;
 }
 
 .body>div{
@@ -34,21 +35,30 @@ iframe{border-radius: 7px;}
     color: rgb(228, 212, 68);
     font-family: Baloo2;
     font-size: 1.5em;
-    padding: 0px;
-    
+    padding: 0px;   
+}
+.afford p:nth-of-type(2){
+    position: absolute;
+    color: white;
+    font-size: 0.75em;
+    right: 50px;
+    bottom: 0px;
+    display: none;
 }
 
 .afford a{
     text-align: center;
     position: absolute;
     right: 50px;
-    bottom: 20px;
+    bottom: 30px;
     width: 13%;
     height: 30%;
     font-size: 1.25em;
     border: none;
     border-radius: 10px;
     background-color: rgb(228, 212, 68);
+    color: white;
+    text-decoration: none;
 }
 .desc{
     width: 40%;
@@ -61,7 +71,7 @@ iframe{border-radius: 7px;}
     height: 30%;
 }
 .description{
-    height: 60%;
+    height: fit-content;
     margin: 0px 10px;
     background-color: rgba(0, 0, 0, 0.247);
     color: white;
@@ -69,10 +79,14 @@ iframe{border-radius: 7px;}
     font-size: 1em;
     padding: 5px;
 }
-
+.description p{
+    overflow-y: scroll;
+    height: 150px;
+    font-family: Baloo2;
+}
 table{
     margin: 10px;
 }
 table tr td:first-child{
-    width: 40%;
+    width: 200px;
 }

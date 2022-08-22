@@ -95,18 +95,18 @@
  
     <div class="body">
         <div class="video">
-            <iframe width="710" height="393" src="https://www.youtube.com/embed/1E051WtpyWg?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="710" height="393" src="https://www.youtube.com/embed/K_03kFqWfqs?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="afford">
-                <h2>MARVEL'S SPIDERMAN: REMASTERED</h2>
-                <p>1.139.000 VNĐ</p>
+                <h2>ELDEN RING</h2>
+                <p>600.000 VNĐ</p>
                 <p>Tài khoản:</p>
                 <a>MUA</a>
             </div>
         </div>
         <div class="desc">
-            <div></div>
+            <div id="Elden"></div>
             <div class="description">
-                <p>Trong Marvel's Spider-Man - Remastered, các thế giới của Peter Parker và Spider-Man va chạm nhau trong một câu chuyện gốc hành động ngẹt thở. Vào vai Peter Parker đầy kinh nghiệm, chiến đấu với tội phạm lớn và những nhân vật phản diện tiêu biểu trong New York của Marvel.</p>
+                <p>Bạn đã thừa kế mảnh đất nông trại cũ của ông mình ở Thung lũng Stardew. Được trang bị các công cụ truyền tay và một vài đồng xu, bạn bắt đầu cuộc sống mới của mình. Bạn có thể học cách sống xa đất và biến những cánh đồng um tùm này thành một ngôi nhà thịnh vượng không?</p>
                 <table  align="center">
                     <tr>
                         <td>Đánh giá chung:</td>
@@ -115,16 +115,17 @@
 
                     <tr>
                         <td>Ngày phát hành:</td>
-                        <td style="color: rgb(228, 212, 68);">12 Thg 8, 2022</td>
+                        <td style="color: rgb(228, 212, 68);">19 Thg 7, 2022</td>
                     </tr>
                     <tr>
                         <td>Nhà phát triến:</td>
                         <td style="color: rgb(228, 212, 68);">
-                            Insomniac Games, Nixxes Software</td>
+                            Studio BlueTwelve</td>
                     </tr>
                     <tr>
                         <td>Nhà phát hành:</td>
-                        <td style="color: rgb(228, 212, 68);">PlayStation PC LLC</td>
+                        <td style="color: rgb(228, 212, 68);">
+                            Annapurna Interactive</td>
                     </tr>
                 </table>
             </div>
@@ -136,9 +137,9 @@
         if(login.active == "yes")
         {
             user = check(login.name);
-            $(".afford p:nth-of-type(2)").html("Tài khoản: " + user.wallet);
+            $(".afford p:nth-of-type(2)").html("Tài khoản: " + user.wallet +" VNĐ");
         }
-        if(user.cart.indexOf("#spd") != -1)
+        if(user.cart.indexOf("#Elden") != -1)
             $(".afford a").html("Mở");
     },2000);
         $().ready(function(){
@@ -149,17 +150,17 @@
                 return;
             }
 
-                var text = "Bạn muốn mua Spider-man: Remastered?";
+                var text = "Bạn muốn mua Stardew Valley?";
                 if($(".afford a").html() == "Mở") return;
-                if(user.wallet >= 1139000 && confirm(text)==true)
+                if(user.wallet >= 600000 && confirm(text)==true)
                 {
-                    var money = parseInt(user.wallet) -1139000;
+                    var money = parseInt(user.wallet) -600000;
                     user.wallet = money;
-                    user.cart = user.cart +"#spd";
+                    user.cart = user.cart +"#Elden";
                     localStorage.setItem(user.key,JSON.stringify(user));
                     $(".afford a").html("Mở");
                 }
-                else if(user.wallet <1139000) alert("Tài khoản quý khách không đủ để thực hiện giao dịch!");
+                else if(user.wallet <600000) alert("Tài khoản quý khách không đủ để thực hiện giao dịch!");
         })
         });
     </script>

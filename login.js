@@ -70,7 +70,10 @@ $().ready(function(){
             var i=parseInt(localStorage.getItem("index"));
             var data = {
                 "name": user,
-                "password": pass
+                "password": pass,
+                "wallet": "0",
+                "cart": "",
+                "key": "user" +i
             };
             localStorage.setItem("user"+i,JSON.stringify(data));
             i=i+1;
@@ -85,24 +88,24 @@ $().ready(function(){
     }
         $(".wrong").html(text);
     });
-    
-    //KIỂM TRA USERNAME TRONG LOCALPLACE
-    function check(username){
-        var i=parseInt(localStorage.getItem("index"));
-        var A = new Array;
-        A[0] = "null";
-        for(var j = 1; j<i; j++)
-        {
-            A[j]=localStorage.getItem("user"+j);
-        }  
-
-        for(var j = 1; j<A.length; j++)
-        {
-            var temp = JSON.parse(A[j]);
-            if(temp.name == username)
-            return temp;
-        }
-
-        return 0;
-    }
 });
+
+ //KIỂM TRA USERNAME TRONG LOCALPLACE
+ function check(username){
+    var i=parseInt(localStorage.getItem("index"));
+    var A = new Array;
+    A[0] = "null";
+    for(var j = 1; j<i; j++)
+    {
+        A[j]=localStorage.getItem("user"+j);
+    }  
+
+    for(var j = 1; j<A.length; j++)
+    {
+        var temp = JSON.parse(A[j]);
+        if(temp.name == username)
+        return temp;
+    }
+
+    return 0;
+}
