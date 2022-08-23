@@ -61,25 +61,25 @@ $().ready(function(){
     t = 10;
     $("#right").click(function(){
         t=t-200;
-        $("#first").css("marginLeft",t+"px");
+        $("#paid a:first-child").css("marginLeft",t+"px");
     });
 
     $("#left").click(function(){
         t=t+200;
         if(t>0) t=10;
-        $("#first").css("marginLeft",t+"px");
+        $("#paid a:first-child").css("marginLeft",t+"px");
     });
 
     d = 10;
     $("#right1").click(function(){
         d=d-200;
-        $("#first1").css("marginLeft",d+"px");
+        $("#popular a:first-child").css("marginLeft",d+"px");
     });
 
     $("#left1").click(function(){
         d=d+200;
         if(d>0) d=10;
-        $("#first1").css("marginLeft",d+"px");
+        $("#popular a:first-child").css("marginLeft",d+"px");
     });
 
     //kiem tra trang thai login
